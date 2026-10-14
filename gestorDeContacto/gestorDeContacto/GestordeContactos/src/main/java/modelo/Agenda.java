@@ -11,6 +11,17 @@ import java.util.List;
 
 public class Agenda {
     
+    private List<Contacto> listaContactos;
+
+    // Constructor
+    public Agenda() {
+        this.listaContactos = new ArrayList<>();
+    }
+
+    public void guardarNuevosContactos(Contacto c) {
+        this.listaContactos.add(c);
+    }
+
    
     public String busquedaPersona(String nombre) {
         for (Contacto c : listaContactos) {
@@ -22,4 +33,9 @@ public class Agenda {
         return null; 
     }
 
+   
+    public List<Contacto> getContactos() {
+        return this.listaContactos;
+    }
+}
    
